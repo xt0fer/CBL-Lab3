@@ -44,8 +44,23 @@ $ sum results.dat
 # you should see as output
 5334 1 results.dat
 ```
+### outline
 
-Now, if you'd like add a DISPLAY header and DISPLAY each row`STDOUT` for a nice presentaion in addition to the output file.
+You want to
+- in your ENV, define your IO section to have to files SELECT'd
+- create a data div with a file section that has two FD and Picture records for input and output records
+- have a working storage that has LAST-RECORD flag to kno when you run out of input.
+- a record that holds the pretty printed formats, so you can print out a row )in addition to writing it into the output file.
+- then in your procedure div,
+  - open your files
+  - read the next record, until enf of file
+  - write out the record to the output file
+  - then read the next record
+- then stop
+
+After you get the reading writing going, add a display output of formatted data.
+
+Add a DISPLAY header and DISPLAY each row`STDOUT` for a nice presentaion in addition to the output file. Like this:
 
 ```
 Name     Gross     Taxes     Net Pay  
