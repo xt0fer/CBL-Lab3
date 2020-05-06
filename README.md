@@ -45,4 +45,34 @@ $ sum results.dat
 5334 1 results.dat
 ```
 
-Now, if you'd like add ANOTHER output file that PRINTS to `STDOUT` a nice line for each operation.
+Now, if you'd like add a DISPLAY header and DISPLAY each row`STDOUT` for a nice presentaion in addition to the output file.
+
+```
+Name     Gross     Taxes     Net Pay  
+Kris       $200.00    $10.00   $190.00
+April      $252.00    $12.60   $239.40
+James      $204.25    $12.25   $192.00
+Chris      $322.00    $19.32   $302.68
+Zanetta    $330.00   $165.00   $165.00
+```
+
+If you want to check your output file, do this:
+
+```
+$ od -a results.dat 
+0000000    K   r   i   s  sp  sp  sp  sp   0   0   0   0   0   2   0   0
+0000020    0   0   0   0   0   0   0   0   1   0   0   0   0   0   0   0
+0000040    0   1   9   0   0   0   A   p   r   i   l  sp  sp  sp   0   0
+0000060    0   0   0   2   5   2   0   0   0   0   0   0   0   0   1   2
+0000100    6   0   0   0   0   0   0   2   3   9   4   0   J   a   m   e
+0000120    s  sp  sp  sp   0   0   0   0   0   2   0   4   2   5   0   0
+0000140    0   0   0   0   1   2   2   5   0   0   0   0   0   1   9   2
+0000160    0   0   C   h   r   i   s  sp  sp  sp   0   0   0   0   0   3
+0000200    2   2   0   0   0   0   0   0   0   0   1   9   3   2   0   0
+0000220    0   0   0   3   0   2   6   8   Z   a   n   e   t   t   a  sp
+0000240    0   0   0   0   0   3   3   0   0   0   0   0   0   0   0   1
+0000260    6   5   0   0   0   0   0   0   0   1   6   5   0   0        
+0000276
+```
+
+-Ciao.
