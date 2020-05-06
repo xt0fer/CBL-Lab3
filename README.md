@@ -41,6 +41,8 @@ when you think you have it right, run a shell command on your output file.
 
 ```bash
 $ sum results.dat
-# the results should be
-
+# you should see as output
+5334 1 results.dat
 ```
+
+Now, if you'd like add ANOTHER output file that PRINTS to `STDOUT` a nice line for each operation.
